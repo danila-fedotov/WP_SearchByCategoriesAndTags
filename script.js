@@ -1,16 +1,26 @@
 $(function() {
-	$('#keyword').on('focus', function () {
-		$('#option').show('fast');
-	});
+	// $('#keyword').on('focus', function () {
+		// $('#option').show('fast');
+	// });
 	
-	$('#btnCancel').on('click', function () {
-		$('#option').hide('fast');
-	});
+	// $('#btncancel').on('click', function () {
+		// $('#option').hide('fast');
+	// });
 	
-	SetCategories();
-	$('.chosen-select').chosen();
-	$('.chosen-select').hide();
-	$('#option').hide();
+	// setcategories();
+	// $('.chosen-select').chosen();
+	// $('.chosen-select').hide();
+	// $('#option').hide();
+	$('.search-field').keypress(function(e){
+		var oldText = $(this).val();
+		var newText = String.fromCharCode(e.charCode);
+		var start = this.selectionStart;
+		var end = this.selectionEnd;
+		
+		newText = oldText.substr(0, start) + newText + oldText.substr(end);
+        alert(newText);
+		e.stopPropagation();
+    });
 });
 
 function SetCategories() {

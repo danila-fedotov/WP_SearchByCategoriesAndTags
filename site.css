@@ -50,33 +50,32 @@
 .container-nochosen {
 	color: red;
 }
-.items-chosen:active {
-	border: 1px solid #5897fb;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
 .items-chosen {
-	padding: 0px;
+	padding: 1px;
 	box-sizing: border-box;
 	overflow: hidden;
-	
 	height: auto;
 	border: 1px solid #aaa;
 	cursor: text;
-	
+	text-align: left;
+}
+.items-chosen active {
+	border: 1px solid #5897fb;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.search-field {
+	display: inline;
 }
 .item-chosen {
-	list-style-type: none;
 	display: inline;
-	position: relative;
-	margin: 3px 0px 3px 5px !important;
-	padding: 3px 5px 3px 5px;
-	border: 1px solid #aaa;
-	border-radius: 3px;
-	
-	background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-	background-clip: padding-box;
-	color: #333;
-	line-height: 13px;
+	padding: 0px 5px;
+	border-radius: 5px;
+	background-color: #2C73A2;
+	color: white;
 	cursor: default;
-	box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+	margin-right: 5px;
+	white-space: nowrap;
+}
+span {
+	white-space: nowrap;
 }
