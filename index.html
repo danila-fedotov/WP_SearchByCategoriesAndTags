@@ -1,65 +1,17 @@
 <html>
 <head>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="chosen.jquery.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<link type="text/css" href="site.css" rel="Stylesheet">
+	<link type="text/css" href="chosen.css" rel="Stylesheet">
 </head>
 <body>
 	<div id='main1' style='width: 500px; border: 1px solid silver; padding: 20px; height: auto; text-align: center;'>
-		<input type='text' placeholder='Найти статью' id='keyword' style='width: 100%' />
+		<input type='text' placeholder='Найти статью' id='keyword' style='width: 100%' tabindex='1' />
 		<div id='option'>
-			<div class="main-container" style="width: 100%">
-				<ul class="items-chosen">
-					<li class="item-chosen">
-						Linux
-					</li>
-					<li class="item-chosen">
-						HR
-					</li>
-					<li class="item-chosen">
-						Инфрастуктура
-					</li>
-					<li class="item-chosen">
-						Кадры
-					</li>
-					<li class="item-chosen">
-						О Компании
-					</li>
-					<li class="item-chosen">
-						Обучение и курсы
-					</li>
-					<li class="item-chosen">
-						О Компании
-					</li>
-					<li class="item-chosen">
-						О Компании
-					</li>
-					<li class="item-chosen">
-						О Компании
-					</li>
-					<li class="item-chosen">
-						О Компании
-					</li>
-					<li class="item-chosen">
-						О Компании
-					</li>
-					<li class="search-field">
-						<input type='text' class='search-field' autocomplete="off" style="width: 25px;">
-					</li>
-				</ul>
-				<div class="container-nochosen">
-					<ul class="chosen-results">
-						<li class="active-result" data-option-array-index="1">Компоненты</li>
-						<li class="result-selected" data-option-array-index="2">О компании</li>
-						<li class="active-result" data-option-array-index="3">Общая информация</li>
-						<li class="active-result" data-option-array-index="4">Обучение</li>
-						<li class="active-result" data-option-array-index="5">Frontend</li>
-						<li class="active-result" data-option-array-index="6">Linux</li>
-						<li class="active-result" data-option-array-index="7">Ruby</li>
-						<li class="active-result" data-option-array-index="8">Symfony2</li>
-					</ul>
-				</div>
-			</div>
+			<select id='categories' data-placeholder="Choose a Country..." class="chosen-select" multiple="" style="width: 350px; display: none;" tabindex="2">
+			</select>
 			
 			<a href="#" class="btnForA" id='btnSearch'>НАЙТИ</a>
 			<a href="#" id='btnCancel'>свернуть</a>
