@@ -22,12 +22,23 @@ $(function() {
 		// e.stopPropagation();
     // });
 	SetElements();
-	$('#categories').chosen();
+	SetTags();
+	$('#categories').chosen({no_results_text: "Уппсс, ничего не найдено..."});
+	$('#tags').chosen({no_results_text: "Уппсс, ничего не найдено..."});
 });
 
 function SetElements() {
 	var element = $('#categories');
 	var categories = ['Компоненты', 'О компании', 'Общая информация', 'Обучение', 'Frontend', 'Linux', 'Ruby', 'Symfony2'];
+	
+	$.each(categories, function(index, value) {
+		element.append($("<option />").val(index).text(value));
+	});
+}
+
+function SetTags() {
+	var element = $('#tags');
+	var categories = ['C#', 'РУССКИЙ ЯЗЫК', 'LINUX', 'Обучение', 'Frontend', 'Linux', 'Ruby', 'Symfony2'];
 	
 	$.each(categories, function(index, value) {
 		element.append($("<option />").val(index).text(value));
